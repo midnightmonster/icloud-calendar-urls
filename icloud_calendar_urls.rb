@@ -43,7 +43,7 @@ class PlistXML
   end
 
   def [](key)
-    v = @xml.root.get_elements('//key[text() = "'+key.to_s+'")]').first.next_element
+    v = @xml.root.get_elements('//key[text() = "'+key.to_s+'"]').first.next_element
     case v.name
     when 'true' then true
     when 'false' then false
