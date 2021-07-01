@@ -35,7 +35,7 @@ Or download [`icloud_calendar_urls.rb`](https://raw.githubusercontent.com/midnig
 ruby icloud_calendar_urls.rb
 ```
 
-You'll get nice little report that looks something like this:
+You'll get a nice little report that looks something like this:
 
 ```markdown
 iCloud (your-address@icloud.com)
