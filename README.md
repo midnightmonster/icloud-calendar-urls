@@ -4,23 +4,34 @@ Instantly list the CalDAV URLs of your iCloud calendars so you can add them to o
 
 ## Why?
 
-I've been using Thunderbird for my email since it came out almost 20 years ago. It's not cutting edge or trendy, but it's reliable and fast even with a couple decades of archives, and I understand how it works.
-
-On my iPhone, I just use Apple Mail, and calendar invites in email Just Work. On the desktop, though, it's not so convenient to send and accept invites when Apple Calendar (and Fantastical, which is what I actually use) want to send via Apple Mail, and for irritating historical reasons my iCloud address isn't even my normal email address.
-
-Thunderbird's actual calendar UI is not nearly as lovely as Fantastical, but the invite handling works well if only you can hook it up to your actual calendar.
-
-iCloud calendaring is based on CalDAV and completely compatible with Thunderbird, but Apple does not make it easy at all to find the secret CalDAV URL you need for each calendar. **This solves that problem.**
+Apple's iCloud calendars are based on CalDAV, and they're compatible with Thunderbird and most other calendar programs, if only you can find the secret CalDAV URL of each calendar. **This script makes that very easy.**
 
 ## Requirements
 
-* A Mac desktop or laptop that has the iCloud calendars you want setup in the Apple Calendar app
+* A Mac desktop or laptop with your iCloud calendars currently accessible in the Apple Calendar app
 * The ability to open `Terminal` and paste a command
 * At least one of:
-  * Some familiarity with any programming language so you can read the script and see it's safe
+  * Some familiarity with any programming language so you can read the short script and see it's safe
   * A friend with same
   * Blind trust in the kindness of a stranger on the Internet
-  
+
+## Permissions problem?
+
+When you run one of the commands in **Usage** below, you may get an error that includes something like this:
+```
+icloud_calendar_urls.rb:59:in `glob': Operation not permitted - /Users/USERNAME/Library/Calendars (Errno::EPERM)
+```
+In that case, don't reach for `sudo`—it won't help. Try typing each of these:
+```
+ls ~/Library
+ls ~/Library/Calendars
+```
+...and see if Mac OS gives you some kind of prompt to allow access.
+
+If that doesn't solve it, open 🍎 > System Preferences and go to "Security & Privacy". Then go to "Full Disk Access", click the lock to make changes, click the + button to add an application, and add Terminal. Thanks to @erickvd for [this tip](https://github.com/midnightmonster/icloud-calendar-urls/issues/1).
+
+<img width="780" alt="Screen shot of Security & Privacy / Full Disk Access" src="https://user-images.githubusercontent.com/57948/161054592-a4590f02-c276-403f-a22a-13dde4e28bc7.png">
+
 ## Usage
 
 Paste this in the terminal:
