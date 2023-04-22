@@ -20,6 +20,15 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+puts "
+================================================================================
+ATTENTION! This script only works on macOS pre-Ventura (and maybe pre-Monterey).
+If you have Ventura (or maybe Monterey) or later, try the (much shorter) shell
+script in this repo, `icloud_calendar_urls`.
+================================================================================
+
+"
+
 require 'rexml/document'
 require 'uri'
 
