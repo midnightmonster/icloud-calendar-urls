@@ -27,7 +27,7 @@ ls ~/Library/Calendars
 ```
 ...and see if Mac OS gives you some kind of prompt to allow access.
 
-If that doesn't solve it, open 🍎 > System Preferences and go to "Security & Privacy". Then go to "Full Disk Access", click the lock to make changes, click the + button to add an application, and add Terminal. Thanks to @erickvd for [this tip](https://github.com/midnightmonster/icloud-calendar-urls/issues/1).
+If that doesn't solve it, open 🍎 > System Preferences and go to "Privacy & Security". Then go to "Full Disk Access", click the lock to make changes, click the + button to add an application, and add Terminal. Thanks to @erickvd for [this tip](https://github.com/midnightmonster/icloud-calendar-urls/issues/1).
 
 <img width="780" alt="Screen shot of Security & Privacy / Full Disk Access" src="https://user-images.githubusercontent.com/57948/161054592-a4590f02-c276-403f-a22a-13dde4e28bc7.png">
 
